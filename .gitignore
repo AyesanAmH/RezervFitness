@@ -1,0 +1,16 @@
+# Visual Studio
+.vs/
+**/.vs/
+
+# .NET build output
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
