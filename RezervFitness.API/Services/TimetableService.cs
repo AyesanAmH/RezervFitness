@@ -26,7 +26,7 @@ namespace RezervFitness.API.Services
         }
 
         public async Task<List<TimetableResponseDto>> GetTimetableAsync(
-            int? businessId,
+            Guid? businessId,
             DateTime? date)
         {
             var businessKey = businessId?.ToString() ?? "all";

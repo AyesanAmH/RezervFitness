@@ -2,12 +2,12 @@
 {
     public class Package
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User User { get; set; } = null!;
 
-        public int BusinessId { get; set; }
+        public Guid BusinessId { get; set; }
         public Business Business { get; set; } = null!;
 
         public int TotalCredits { get; set; }

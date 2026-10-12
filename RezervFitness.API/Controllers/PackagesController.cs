@@ -18,9 +18,9 @@ namespace RezervFitness.API.Controllers
         // GET /api/packages?userId=1
         [HttpGet]
         public async Task<IActionResult> GetPackages(
-            [FromQuery] int userId)
+            [FromQuery] Guid userId)
         {
-            if (userId <= 0)
+            if (userId == Guid.Empty)
             {
                 return BadRequest(new
                 {

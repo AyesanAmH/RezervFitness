@@ -19,7 +19,7 @@ namespace RezervFitness.API.Controllers
 
         [HttpGet]
         public async Task<IActionResult> GetTimetable(
-        [FromQuery] int? businessId,
+        [FromQuery] Guid? businessId,
         [FromQuery] DateTime? date)
         {
             var schedules = await _timetableService

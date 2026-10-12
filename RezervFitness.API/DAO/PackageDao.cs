@@ -13,7 +13,7 @@ namespace RezervFitness.API.DAO
         }
 
         public async Task<List<Package>> GetAvailablePackagesAsync(
-            int userId,
+            Guid userId,
             DateTime now)
         {
             return await _context.Packages
@@ -27,13 +27,13 @@ namespace RezervFitness.API.DAO
                 .ToListAsync();
         }
 
-        public async Task<bool> UserExistsAsync(int userId)
+        public async Task<bool> UserExistsAsync(Guid userId)
         {
             return await _context.Users
                 .AnyAsync(u => u.Id == userId);
         }
 
-        public async Task<bool> BusinessExistsAsync(int businessId)
+        public async Task<bool> BusinessExistsAsync(Guid businessId)
         {
             return await _context.Businesses
                 .AnyAsync(b => b.Id == businessId && b.IsActive);
@@ -48,7 +48,7 @@ namespace RezervFitness.API.DAO
         }
 
 
-        public async Task<string> GetBusinessNameAsync(int businessId)
+        public async Task<string> GetBusinessNameAsync(Guid businessId)
         {
             return await _context.Businesses
                 .Where(b => b.Id == businessId)

@@ -30,9 +30,9 @@ namespace RezervFitness.API.Services
         public async Task<BookingResponseDto> BookAsync(
             CreateBookingDto request)
         {
-            if (request.UserId <= 0 ||
-                request.TimetableScheduleId <= 0 ||
-                request.PackageId <= 0)
+            if (request.UserId == Guid.Empty ||
+                request.TimetableScheduleId == Guid.Empty ||
+                request.PackageId == Guid.Empty)
             {
                 throw new InvalidOperationException(
                     "User, schedule and package IDs must be valid.");

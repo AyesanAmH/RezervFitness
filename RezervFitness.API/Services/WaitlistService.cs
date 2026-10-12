@@ -13,7 +13,7 @@ namespace RezervFitness.API.Services
         {
             _context = context;
         }
-        public async Task<bool> PromoteNextAsync(int scheduleId)
+        public async Task<bool> PromoteNextAsync(Guid scheduleId)
         {
             // Reuse the caller's transaction when called from cancellation.
             // Otherwise, create a transaction for standalone promotion.

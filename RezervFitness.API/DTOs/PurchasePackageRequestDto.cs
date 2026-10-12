@@ -5,12 +5,10 @@ namespace RezervFitness.API.DTOs
     public class PurchasePackageRequestDto
     {
         [Required]
-        [Range(1, int.MaxValue)]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         [Required]
-        [Range(1, int.MaxValue)]
-        public int BusinessId { get; set; }
+        public Guid BusinessId { get; set; }
 
         [Required]
         [Range(1, 100)]

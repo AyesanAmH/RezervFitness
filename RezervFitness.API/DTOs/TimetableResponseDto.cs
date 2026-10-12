@@ -2,7 +2,7 @@
 {
     public class TimetableResponseDto
     {
-        public int ScheduleId { get; set; }
+        public Guid ScheduleId { get; set; }
 
         public string ClassName { get; set; } = string.Empty;
 
@@ -18,7 +18,7 @@
 
         public int RemainingSlots { get; set; }
 
-        public int BusinessId { get; set; }
+        public Guid BusinessId { get; set; }
 
         public string BusinessName { get; set; } = string.Empty;
     }

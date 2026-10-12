@@ -2,9 +2,9 @@
 {
     public class TimetableSchedule
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int BusinessId { get; set; }
+        public Guid BusinessId { get; set; }
         public Business Business { get; set; } = null!;
 
         public string ClassName { get; set; } = string.Empty;

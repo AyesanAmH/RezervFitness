@@ -2,11 +2,11 @@
 {
     public class JoinWaitlistDto
     {
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
-        public int TimetableScheduleId { get; set; }
+        public Guid TimetableScheduleId { get; set; }
 
-        public int PackageId { get; set; }
+        public Guid PackageId { get; set; }
 
     }
 }

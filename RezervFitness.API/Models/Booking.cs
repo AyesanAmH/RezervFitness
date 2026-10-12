@@ -9,15 +9,15 @@
 
     public class Booking
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User User { get; set; } = null!;
 
-        public int TimetableScheduleId { get; set; }
+        public Guid TimetableScheduleId { get; set; }
         public TimetableSchedule TimetableSchedule { get; set; } = null!;
 
-        public int PackageId { get; set; }
+        public Guid PackageId { get; set; }
         public Package Package { get; set; } = null!;
 
         public BookingStatus Status { get; set; } = BookingStatus.Confirmed;

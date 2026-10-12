@@ -13,7 +13,7 @@ namespace RezervFitness.API.Services
         }
 
         public async Task<List<PackageResponseDto>> GetAvailablePackagesAsync(
-        int userId)
+        Guid userId)
         {
             var now = DateTime.UtcNow;
 

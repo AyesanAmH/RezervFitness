@@ -21,9 +21,9 @@ namespace RezervFitness.API.Controllers
         public async Task<IActionResult> Join(
             [FromBody] JoinWaitlistDto request)
         {
-            if (request.UserId <= 0 ||
-                request.TimetableScheduleId <= 0 ||
-                request.PackageId <= 0)
+            if (request.UserId == Guid.Empty ||
+                request.TimetableScheduleId == Guid.Empty ||
+                request.PackageId == Guid.Empty)
             {
                 return BadRequest(new
                 {

@@ -10,19 +10,19 @@
     Package ||--o{ WaitlistEntry : references
 
     User {
-        int Id PK
+        UUID  Id PK
         string Email
     }
 
     Business {
-        int Id PK
+        UUID Id PK
         string Name
     }
 
     Package {
-        int Id PK
-        int UserId FK
-        int BusinessId FK
+        UUID Id PK
+        UUID UserId FK
+        UUID BusinessId FK
         int TotalCredits
         int RemainingCredits
         datetime ExpiryDate
@@ -30,8 +30,8 @@
     }
 
     TimetableSchedule {
-        int Id PK
-        int BusinessId FK
+        UUID Id PK
+        UUID BusinessId FK
         string ClassName
         string InstructorName
         datetime StartTime
@@ -40,10 +40,10 @@
     }
 
     Booking {
-        int Id PK
-        int UserId FK
-        int TimetableScheduleId FK
-        int PackageId FK
+        UUID Id PK
+        UUID UserId FK
+        UUID TimetableScheduleId FK
+        UUID PackageId FK
         int Status
         datetime BookedAt
         datetime CancelledAt
@@ -51,10 +51,10 @@
     }
 
     WaitlistEntry {
-        int Id PK
-        int UserId FK
-        int TimetableScheduleId FK
-        int PackageId FK
+        UUID Id PK
+        UUID UserId FK
+        UUID TimetableScheduleId FK
+        UUID PackageId FK
         int Status
         datetime JoinedAt
     }

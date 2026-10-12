@@ -14,7 +14,7 @@ namespace RezervFitness.API.DAO
         }
 
         public async Task<List<TimetableSchedule>> GetSchedulesAsync(
-            int? businessId,
+            Guid? businessId,
             DateTime? date)
         {
             var query = _context.TimetableSchedules
@@ -42,8 +42,8 @@ namespace RezervFitness.API.DAO
             .ToListAsync();
         }
 
-        public async Task<Dictionary<int, int>> GetAttendanceCountsAsync(
-        List<int> scheduleIds)
+        public async Task<Dictionary<Guid, int>> GetAttendanceCountsAsync(
+        List<Guid> scheduleIds)
         {
             return await _context.Bookings
                 .AsNoTracking()

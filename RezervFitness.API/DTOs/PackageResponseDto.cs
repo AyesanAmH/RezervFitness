@@ -2,11 +2,11 @@
 {
     public class PackageResponseDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
-        public int BusinessId { get; set; }
+        public Guid BusinessId { get; set; }
 
         public string BusinessName { get; set; } = string.Empty;
 
